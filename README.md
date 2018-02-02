@@ -1,7 +1,7 @@
 
 # MonitorWeb
 
-Sistema para monitoramento de servidores Linux, utilizando a arquitetura cliente-servidor. O sistema consiste em duas aplicações, um web service desenvolvido em Java para o qual foi dado o nome de MonitorWeb-Api(https://github.com/Eduardobalan/monitorWeb-api), e outra aplicação em C++(https://github.com/Eduardobalan/monitorWeb-Cliente), executada nos servidores Linux como cliente, tendo o nome de MonitorWeb-Cli.
+Sistema para monitoramento de servidores Linux, utilizando a arquitetura cliente-servidor. O sistema consiste em duas aplicações, um web service desenvolvido em Java para o qual foi dado o nome de MonitorWeb-Api(https://github.com/Eduardobalan/monitorWeb-api), e outra aplicação em C++(https://github.com/Eduardobalan/monitorWeb-Cli), executada nos servidores Linux como cliente, tendo o nome de MonitorWeb-Cli.
 
 # MonitorWeb-Cli
 
