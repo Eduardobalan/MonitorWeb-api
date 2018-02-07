@@ -2,8 +2,14 @@
 # Índice de conteúdo
 
 * [Introdução MonitorWeb](#introdução "Introdução sobre o sistema MonitorWeb")
-* [Introdução MonitorWeb-Cli](#monitorweb-cli "Introdução sobre o sistema MonitorWeb-Cli")
-* [Introdução MonitorWeb-Api](#monitorweb-api "Introdução sobre o sistema MonitorWeb-Api")
+  * [Introdução MonitorWeb-Cli](#monitorweb-cli "Introdução sobre o sistema MonitorWeb-Cli")
+  * [Introdução MonitorWeb-Api](#monitorweb-api "Introdução sobre o sistema MonitorWeb-Api")
+* [Guia de instalação](#guia-de-instalação "Guia de instalação")
+  * [Banco de dados](#banco-de-dados "Banco de dados")
+   * [Aplicação](#aplicação "Aplicação")
+   * [Teste Unitário](#teste-unitário "Teste Unitário")
+   * [Docker](#docker "Docker")
+   * [SonarQube](#sonarqube "SonarQube")
 * [Notas de release](#notas-de-release "Notas de release do projeto")
 * [Issues](#issues "Issues do projeto")
 
@@ -20,6 +26,50 @@ O MonitorWeb-Cli realiza a leitura dos dados de seu hospedeiro, tais como CPU (C
 
 Um MonitorWeb-Api é responsável por receber os dados de diversos MonitorWeb-Cli e realizar a persistência no banco de dados. Também é responsável por armazenar as configurações dos clientes, tais como o intervalo de envio dos dados de monitoramento e as informações dos procedimentos de backup. Essas configurações são capturadas periodicamente conforme as configurações do usuário. A API também pode ser utilizada para disponibilizar os dados dos servidores para aplicações de front-end (aplicações responsáveis por coletar a entrada do usuário e processá-la para adequá-la a uma especificação em que o back-end possa utilizar).
 
+
+## Guia de instalação
+
+### Banco de dados
+
+- Dependencias para esse passo: `PostgreSQL` e `pgAdmin` instalados.
+
+No pgAdmin crie um banco de dados com nome de `monitorweb` e solicite um restore do banco de dados localizado no diretorio do projeto `/DB/Banco de dados PostgreSQL.backup` .
+
+### Aplicação
+- Dependencias para esse passo: `Maven`.
+
+Com terminal de seu SO navegue até o mesmo diretorio do arquivo pom.xml e execute os seguintes comandos:
+
+ `mvn clean install`
+
+
+### Teste Unitário
+- Dependencias para esse passo: `Maven`.
+
+Com terminal de seu SO navegue até o mesmo diretorio do arquivo pom.xml e execute os seguintes comandos:
+
+`mvn test`
+
+### Docker
+- Dependencias para esse passo: possuir o `docker` instalado.
+
+Com terminal de seu SO navegue até o mesmo diretorio do arquivo `docker-compose.yml` e execute os seguintes comandos:
+
+`docker-compose up -d`
+
+Duas novas aplicações estarão a dispoição no seu navegador atraves do indreço:
+localhost:9001 ou 127.0.0.1:90001 -> portainer (Gerenciador do docker)
+localhost:9000 ou 127.0.0.1:90000 -> SonarQube (Visualizador dos resultados de testes unitários)
+
+
+### SonarQube
+- Dependencias para esse passo: `Maven` ter execuado o passo do `docker`.
+
+Com terminal de seu SO navegue até o mesmo diretorio do arquivo pom.xml e execute os seguintes comandos:
+
+   `mvn sonar:sonar`
+
+Acesse a navegardor pela endereço 127.0.0.1:9000 ou localhost:9000 para visualizar as informações do sonar.
 
 -----
 
