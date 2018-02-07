@@ -27,6 +27,7 @@ hs_err_pid*
 
 # Intellij configurações
 .idea
+*.iml
 
 # Outros
 .DS_Store
