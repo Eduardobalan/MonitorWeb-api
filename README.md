@@ -40,7 +40,7 @@ No pgAdmin crie um banco de dados com nome de `monitorweb` e solicite um restore
 
 Com terminal de seu SO navegue até o mesmo diretorio do arquivo pom.xml e execute os seguintes comandos:
 
- `mvn clean install`
+      `mvn clean install`
 
 
 ### Teste Unitário
@@ -48,18 +48,19 @@ Com terminal de seu SO navegue até o mesmo diretorio do arquivo pom.xml e execu
 
 Com terminal de seu SO navegue até o mesmo diretorio do arquivo pom.xml e execute os seguintes comandos:
 
-`mvn test`
+      `mvn test`
 
 ### Docker
 - Dependencias para esse passo: possuir o `docker` instalado.
 
-Com terminal de seu SO navegue até o mesmo diretorio do arquivo `docker-compose.yml` e execute os seguintes comandos:
+Com terminal de seu SO navegue até o mesmo diretorio do arquivo `docker-compose.yml` e execute o comandos:
 
-`docker-compose up -d`
+      `docker-compose up -d`
 
 Duas novas aplicações estarão a dispoição no seu navegador atraves do indreço:
-localhost:9001 ou 127.0.0.1:90001 -> portainer (Gerenciador do docker)
-localhost:9000 ou 127.0.0.1:90000 -> SonarQube (Visualizador dos resultados de testes unitários)
+
+- localhost:9001 ou 127.0.0.1:90001 -> portainer (Gerenciador do docker)
+- localhost:9000 ou 127.0.0.1:90000 -> SonarQube (Visualizador dos resultados de testes unitários)
 
 
 ### SonarQube
@@ -67,7 +68,7 @@ localhost:9000 ou 127.0.0.1:90000 -> SonarQube (Visualizador dos resultados de t
 
 Com terminal de seu SO navegue até o mesmo diretorio do arquivo pom.xml e execute os seguintes comandos:
 
-   `mvn sonar:sonar`
+      `mvn sonar:sonar`
 
 Acesse a navegardor pela endereço 127.0.0.1:9000 ou localhost:9000 para visualizar as informações do sonar.
 
