@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @DatabaseSetup(value = ServidorConfigDbServerTest.DATASET, type = DatabaseOperation.INSERT)
 public class ServidorConfigDbServerTest extends GenericTest {
 
-    protected static final String DATASET = "classpath:/datasets/service/servidorConfigDb.xml";
+    protected static final String DATASET = "classpath:/datasets/service/ServidorConfigDb.xml";
 
     @Resource
     private WebApplicationContext webApplicationContext;

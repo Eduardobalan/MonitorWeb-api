@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @DatabaseSetup(value = ServidorConfigServerTest.DATASET, type = DatabaseOperation.INSERT)
 public class ServidorConfigServerTest extends GenericTest {
 
-    protected static final String DATASET = "classpath:/datasets/service/servidorConfig.xml";
+    protected static final String DATASET = "classpath:/datasets/service/ServidorConfig.xml";
 
     @Resource
     private WebApplicationContext webApplicationContext;

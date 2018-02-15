@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @DatabaseSetup(value = MonitoramentoCpuServerTest.DATASET, type = DatabaseOperation.INSERT)
 public class MonitoramentoCpuServerTest extends GenericTest {
 
-    protected static final String DATASET = "classpath:/datasets/service/monitoramentoCpu.xml";
+    protected static final String DATASET = "classpath:/datasets/service/MonitoramentoCpu.xml";
 
     @Resource
     private WebApplicationContext webApplicationContext;

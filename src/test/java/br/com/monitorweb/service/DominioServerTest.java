@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @DatabaseSetup(value = DominioServerTest.DATASET, type = DatabaseOperation.INSERT)
 public class DominioServerTest extends GenericTest{
 
-    protected static final String DATASET = "classpath:/datasets/service/dominio.xml";
+    protected static final String DATASET = "classpath:/datasets/service/Dominio.xml";
 
     @Resource
     private WebApplicationContext webApplicationContext;

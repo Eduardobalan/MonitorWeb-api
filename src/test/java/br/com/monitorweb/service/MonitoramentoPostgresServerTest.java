@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @DatabaseSetup(value = MonitoramentoPostgresServerTest.DATASET, type = DatabaseOperation.INSERT)
 public class MonitoramentoPostgresServerTest extends GenericTest {
 
-    protected static final String DATASET = "classpath:/datasets/service/monitoramentoPostgres.xml";
+    protected static final String DATASET = "classpath:/datasets/service/MonitoramentoPostgres.xml";
 
     @Resource
     private WebApplicationContext webApplicationContext;

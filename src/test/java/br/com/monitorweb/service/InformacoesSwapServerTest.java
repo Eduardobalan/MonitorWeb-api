@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @DatabaseSetup(value = InformacoesSwapServerTest.DATASET, type = DatabaseOperation.INSERT)
 public class InformacoesSwapServerTest extends GenericTest {
 
-    protected static final String DATASET = "classpath:/datasets/service/informacoesSwap.xml";
+    protected static final String DATASET = "classpath:/datasets/service/InformacoesSwap.xml";
 
     @Resource
     private WebApplicationContext webApplicationContext;
