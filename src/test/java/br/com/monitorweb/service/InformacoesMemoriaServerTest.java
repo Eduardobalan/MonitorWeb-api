@@ -48,7 +48,7 @@ public class InformacoesMemoriaServerTest extends GenericTest {
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].id", is(1)))
                 .andExpect(jsonPath("$[0].total", is(16000)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[2].id", is(3)));
     }
@@ -60,7 +60,7 @@ public class InformacoesMemoriaServerTest extends GenericTest {
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id", is(1)))
                 .andExpect(jsonPath("$[0].total", is(16000)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)));
     }
 
@@ -70,7 +70,7 @@ public class InformacoesMemoriaServerTest extends GenericTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(1)))
                 .andExpect(jsonPath("$.total", is(16000)))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test
@@ -80,12 +80,12 @@ public class InformacoesMemoriaServerTest extends GenericTest {
                 .content("{ " +
                         " \"total\" : 16000 ," +
                         " \"servidor\":{\"id\":2}," +
-                        " \"dthr_cadastro\" : \"2017-02-28T04:00:00.000+0000\" }"))
+                        " \"dtHrCadastro\" : \"2017-02-28T04:00:00.000+0000\" }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(4)))
                 .andExpect(jsonPath("$.servidor.id", is(2)))
                 .andExpect(jsonPath("$.total", is(16000)));
-                //.andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                //.andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test

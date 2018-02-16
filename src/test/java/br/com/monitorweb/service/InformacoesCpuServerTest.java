@@ -51,7 +51,7 @@ public class InformacoesCpuServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].cacheSize", is(516)))
                 .andExpect(jsonPath("$[0].cpuCores", is(8)))
                 .andExpect(jsonPath("$[0].siblings", is(16)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[2].id", is(3)));
     }
@@ -66,7 +66,7 @@ public class InformacoesCpuServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].cacheSize", is(516)))
                 .andExpect(jsonPath("$[0].cpuCores", is(8)))
                 .andExpect(jsonPath("$[0].siblings", is(16)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)));
     }
 
@@ -79,7 +79,7 @@ public class InformacoesCpuServerTest extends GenericTest {
                 .andExpect(jsonPath("$.cacheSize", is(516)))
                 .andExpect(jsonPath("$.cpuCores", is(8)))
                 .andExpect(jsonPath("$.siblings", is(16)))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test
@@ -98,7 +98,7 @@ public class InformacoesCpuServerTest extends GenericTest {
                 .andExpect(jsonPath("$.cacheSize", is(1024)))
                 .andExpect(jsonPath("$.cpuCores", is(16)))
                 .andExpect(jsonPath("$.siblings", is(32)));
-                //.andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                //.andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test

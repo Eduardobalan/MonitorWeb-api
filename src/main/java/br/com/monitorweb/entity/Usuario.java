@@ -23,7 +23,7 @@ public class Usuario extends GenericEntity<Long>{
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "usu_dthr_cadastro")
-    private Date dthr_cadastro;
+    private Date dtHrCadastro;
 
     @Column(name = "usu_nome")
     private String nome;
@@ -57,12 +57,12 @@ public class Usuario extends GenericEntity<Long>{
         this.id = id;
     }
 
-    public Date getDthr_cadastro() {
-        return dthr_cadastro;
+    public Date getDtHrCadastro() {
+        return dtHrCadastro;
     }
 
-    public void setDthr_cadastro(Date dthr_cadastro) {
-        this.dthr_cadastro = dthr_cadastro;
+    public void setDtHrCadastro(Date dtHrCadastro) {
+        this.dtHrCadastro = dtHrCadastro;
     }
 
     public String getNome() {

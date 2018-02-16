@@ -50,7 +50,7 @@ public class MonitoramentoSwapServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].informacoesSwap.id", is(1)))
                 .andExpect(jsonPath("$[0].free", is(20000)))
                 .andExpect(jsonPath("$[0].cached", is(21100)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[2].id", is(3)))
                 .andExpect(jsonPath("$[3].id", is(4)));
@@ -65,7 +65,7 @@ public class MonitoramentoSwapServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].informacoesSwap.id", is(1)))
                 .andExpect(jsonPath("$[0].free", is(20000)))
                 .andExpect(jsonPath("$[0].cached", is(21100)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].informacoesSwap.id", is(1)))
                 .andExpect(jsonPath("$[1].free", is(19000)));
@@ -78,7 +78,7 @@ public class MonitoramentoSwapServerTest extends GenericTest {
                 .andExpect(jsonPath("$.informacoesSwap.id", is(1)))
                 .andExpect(jsonPath("$.free", is(20000)))
                 .andExpect(jsonPath("$.cached", is(21100)))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test
@@ -89,12 +89,12 @@ public class MonitoramentoSwapServerTest extends GenericTest {
                         " \"informacoesSwap\":{\"id\":3}," +
                         " \"free\" : 40000 ," +
                         " \"cached\" : 40100 ," +
-                        " \"dthr_cadastro\" : \"2017-02-28T04:00:00.000+0000\" }"))
+                        " \"dtHrCadastro\" : \"2017-02-28T04:00:00.000+0000\" }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.informacoesSwap.id", is(3)))
                 .andExpect(jsonPath("$.free", is(40000)))
                 .andExpect(jsonPath("$.cached", is(40100)));
-                //.andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                //.andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test

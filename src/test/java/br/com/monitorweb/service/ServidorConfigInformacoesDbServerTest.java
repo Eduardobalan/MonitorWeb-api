@@ -53,8 +53,8 @@ public class ServidorConfigInformacoesDbServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].intervaloExec", is(3600)))
                 .andExpect(jsonPath("$[0].ativo", is(true)))
                 .andExpect(jsonPath("$[0].pathMain", is("/etc/postgres/9.6/main")))
-                .andExpect(jsonPath("$[0].dthr_alteracao", is("2017-02-28T04:00:00.000+0000")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].servidor.id", is(1)))
                 .andExpect(jsonPath("$[1].nomeSgdb", is(EnumSgdb.POSTGRESQL.toString())))
@@ -78,8 +78,8 @@ public class ServidorConfigInformacoesDbServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].servidor.id", is(1)))
                 .andExpect(jsonPath("$[0].nomeSgdb", is(EnumSgdb.POSTGRESQL.toString())))
                 .andExpect(jsonPath("$[0].intervaloExec", is(3600)))
-                .andExpect(jsonPath("$[0].dthr_alteracao", is("2017-02-28T04:00:00.000+0000")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[0].ativo", is(true)))
                 .andExpect(jsonPath("$[0].pathMain", is("/etc/postgres/9.6/main")))
                 .andExpect(jsonPath("$[1].id", is(2)))
@@ -99,8 +99,8 @@ public class ServidorConfigInformacoesDbServerTest extends GenericTest {
                 .andExpect(jsonPath("$.pathMain", is("/etc/postgres/9.6/main")))
                 .andExpect(jsonPath("$.intervaloExec", is(3600)))
                 .andExpect(jsonPath("$.ativo", is(true)))
-                .andExpect(jsonPath("$.dthr_alteracao", is("2017-02-28T04:00:00.000+0000")))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test
@@ -110,6 +110,7 @@ public class ServidorConfigInformacoesDbServerTest extends GenericTest {
                 .content("{ " +
                         " \"servidor\":{\"id\":2}," +
                         " \"nomeSgdb\" : \"POSTGRESQL\" ," +
+                        " \"dtHrAlteracao\" : \"2017-02-28T04:00:00.000+0000\" ," +
                         " \"pathMain\" : \"/etc/postgres/9.8/main\" ," +
                         " \"ativo\" : true," +
                         " \"intervaloExec\" : 9999 }"))

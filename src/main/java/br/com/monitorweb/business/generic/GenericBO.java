@@ -43,7 +43,7 @@ public class GenericBO <Entity extends GenericEntity, Repository extends JpaRepo
      */
     public Entity inserir(Entity entityNova){
         try{
-            entityNova.setDthr_cadastro(new Date());
+            entityNova.setDtHrCadastro(new Date());
             return repository.save(entityNova);
         }catch (Exception e){
             throw new SqlGenericRuntimeException(e);

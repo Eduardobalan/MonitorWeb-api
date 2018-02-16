@@ -38,7 +38,7 @@ public class InformacoesCpu extends GenericEntity<Long>{
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "cpui_dthr_cadastro")
-    private Date dthr_cadastro;
+    private Date dtHrCadastro;
 
     public Long getId() {
         return id;
@@ -88,11 +88,11 @@ public class InformacoesCpu extends GenericEntity<Long>{
         this.siblings = siblings;
     }
 
-    public Date getDthr_cadastro() {
-        return dthr_cadastro;
+    public Date getDtHrCadastro() {
+        return dtHrCadastro;
     }
 
-    public void setDthr_cadastro(Date dthr_cadastro) {
-        this.dthr_cadastro = dthr_cadastro;
+    public void setDtHrCadastro(Date dtHrCadastro) {
+        this.dtHrCadastro = dtHrCadastro;
     }
 }

@@ -59,7 +59,7 @@ public class MonitoramentoPostgresInformacoesTest extends GenericTest {
                 .andExpect(jsonPath("$[0].replacementWortTuples", is("true")))
                 .andExpect(jsonPath("$[0].maxStackDepth", is("2MB")))
                 .andExpect(jsonPath("$[0].maxPreparedTransactions", is("0")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].servidorConfigInformacoesDb.id", is(1)))
                 .andExpect(jsonPath("$[2].id", is(3)))
@@ -84,7 +84,7 @@ public class MonitoramentoPostgresInformacoesTest extends GenericTest {
                 .andExpect(jsonPath("$[0].replacementWortTuples", is("true")))
                 .andExpect(jsonPath("$[0].maxStackDepth", is("2MB")))
                 .andExpect(jsonPath("$[0].maxPreparedTransactions", is("0")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].servidorConfigInformacoesDb.id", is(1)));
     }
@@ -106,7 +106,7 @@ public class MonitoramentoPostgresInformacoesTest extends GenericTest {
                 .andExpect(jsonPath("$.replacementWortTuples", is("true")))
                 .andExpect(jsonPath("$.maxStackDepth", is("2MB")))
                 .andExpect(jsonPath("$.maxPreparedTransactions", is("0")))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test

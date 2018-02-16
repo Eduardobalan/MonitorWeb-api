@@ -26,11 +26,11 @@ public class ServidorConfigDb extends GenericEntity<Long>{
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "scdb_dthr_cadastro")
-    private Date dthr_cadastro;
+    private Date dtHrCadastro;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "scdb_dthr_alteracao")
-    private Date dthr_alteracao;
+    private Date dtHrAlteracao;
 
     @Enumerated(value = EnumType.STRING)
     @Column(name = "scdb_nome_sgdb")
@@ -81,21 +81,21 @@ public class ServidorConfigDb extends GenericEntity<Long>{
     }
 
     @Override
-    public Date getDthr_cadastro() {
-        return dthr_cadastro;
+    public Date getDtHrCadastro() {
+        return dtHrCadastro;
     }
 
     @Override
-    public void setDthr_cadastro(Date dthr_cadastro) {
-        this.dthr_cadastro = dthr_cadastro;
+    public void setDtHrCadastro(Date dtHrCadastro) {
+        this.dtHrCadastro = dtHrCadastro;
     }
 
-    public Date getDthr_alteracao() {
-        return dthr_alteracao;
+    public Date getdtHrAlteracao() {
+        return dtHrAlteracao;
     }
 
-    public void setDthr_alteracao(Date dthr_alteracao) {
-        this.dthr_alteracao = dthr_alteracao;
+    public void setdtHrAlteracao(Date dtHrAlteracao) {
+        this.dtHrAlteracao = dtHrAlteracao;
     }
 
     public EnumSgdb getNomeSgdb() {

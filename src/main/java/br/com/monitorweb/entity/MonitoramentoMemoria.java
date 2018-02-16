@@ -24,7 +24,7 @@ public class MonitoramentoMemoria extends GenericEntity<Long>{
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "memm_dthr_cadastro")
-    private Date dthr_cadastro;
+    private Date dtHrCadastro;
 
     @Column(name = "memm_active")
     private Long active;
@@ -70,12 +70,12 @@ public class MonitoramentoMemoria extends GenericEntity<Long>{
         this.memfree = memfree;
     }
 
-    public Date getDthr_cadastro() {
-        return dthr_cadastro;
+    public Date getDtHrCadastro() {
+        return dtHrCadastro;
     }
 
-    public void setDthr_cadastro(Date dthr_cadastro) {
-        this.dthr_cadastro = dthr_cadastro;
+    public void setDtHrCadastro(Date dtHrCadastro) {
+        this.dtHrCadastro = dtHrCadastro;
     }
 
     public Long getAvailabre() {

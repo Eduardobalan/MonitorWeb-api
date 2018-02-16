@@ -11,6 +11,7 @@ public class SqlGenericRuntimeException extends GenericRuntimeException {
         super(e.getMessage(), e.getCause());
     }
 
+    @Override
     public String getMessage() {
         return "Exception DB -> "+super.getMessage();
     }

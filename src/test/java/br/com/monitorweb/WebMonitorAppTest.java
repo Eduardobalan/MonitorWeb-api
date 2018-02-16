@@ -19,6 +19,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class WebMonitorAppTest {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebMonitorAppTest.class, args);
+        SpringApplication.run(WebMonitorAppTest.class, args);//NOSONAR
     }
 }

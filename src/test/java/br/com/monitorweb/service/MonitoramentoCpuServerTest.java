@@ -51,7 +51,7 @@ public class MonitoramentoCpuServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].informacoesCpu.nome", is("I7")))
                 .andExpect(jsonPath("$[0].coreId", is(16)))
                 .andExpect(jsonPath("$[0].cpuMhz", is(3200)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[2].id", is(3)))
                 .andExpect(jsonPath("$[3].id", is(4)));
@@ -67,7 +67,7 @@ public class MonitoramentoCpuServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].informacoesCpu.nome", is("I7")))
                 .andExpect(jsonPath("$[0].coreId", is(16)))
                 .andExpect(jsonPath("$[0].cpuMhz", is(3200)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].informacoesCpu.id", is(1)))
                 .andExpect(jsonPath("$[1].informacoesCpu.nome", is("I7")))
@@ -83,7 +83,7 @@ public class MonitoramentoCpuServerTest extends GenericTest {
                 .andExpect(jsonPath("$.informacoesCpu.nome", is("I7")))
                 .andExpect(jsonPath("$.coreId", is(16)))
                 .andExpect(jsonPath("$.cpuMhz", is(3200)))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test
@@ -93,7 +93,7 @@ public class MonitoramentoCpuServerTest extends GenericTest {
                 .content("{ " +
                         " \"nome\" : \"I9\" ," +
                         " \"informacoesCpu\":{\"id\":3}," +
-                        //" \"dthr_cadastro\" : \"2017-02-28T04:00:00.000+0000\" ," +
+                        //" \"dtHrCadastro\" : \"2017-02-28T04:00:00.000+0000\" ," +
                         " \"coreId\" : 1 ," +
                         " \"cpuMhz\" : 3300 }"))
                 .andExpect(status().isOk())
@@ -101,7 +101,7 @@ public class MonitoramentoCpuServerTest extends GenericTest {
                 .andExpect(jsonPath("$.informacoesCpu.id", is(3)))
                 .andExpect(jsonPath("$.coreId", is(1)))
                 .andExpect(jsonPath("$.cpuMhz", is(3300)));
-                //.andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                //.andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test

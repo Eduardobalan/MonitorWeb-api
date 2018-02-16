@@ -47,7 +47,7 @@ public class UsuarioServerTest extends GenericTest{
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id", is(1)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[0].nome", is("Eduardo")))
                 .andExpect(jsonPath("$[0].sobrenome", is("Balan")))
                 .andExpect(jsonPath("$[0].login", is("Eduardo Balan")))
@@ -55,7 +55,7 @@ public class UsuarioServerTest extends GenericTest{
                 .andExpect(jsonPath("$[0].senha", is("102030")))
                 .andExpect(jsonPath("$[0].sexo", is("MASCULINO")))
                 .andExpect(jsonPath("$[1].id", is(2)))
-                .andExpect(jsonPath("$[1].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[1].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].nome", is("karol")))
                 .andExpect(jsonPath("$[1].sobrenome", is("Jeronimo")))
                 .andExpect(jsonPath("$[1].login", is("KAROL JERONIMO")))
@@ -69,7 +69,7 @@ public class UsuarioServerTest extends GenericTest{
     public void buscarPorIdTest() throws Exception {
         mockMvc.perform(get("/usuario/2"))
                 .andExpect(jsonPath("$.id", is(2)))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$.nome", is("karol")))
                 .andExpect(jsonPath("$.sobrenome", is("Jeronimo")))
                 .andExpect(jsonPath("$.login", is("KAROL JERONIMO")))
@@ -84,19 +84,21 @@ public class UsuarioServerTest extends GenericTest{
         mockMvc.perform(post("/usuario").contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content("{ " +
                         " \"nome\" : \"Ikarol\" ," +
-                        " \"dthr_cadastro\" : \"2017-01-28T04:00:00.000+0000\" ," +
+                        " \"dtHrCadastro\" : \"2017-01-28T04:00:00.000+0000\" ," +
                         " \"login\" : \"IKAROL JERONIMO\" ," +
+                        " \"telefone\" : \"67999159969\" ," +
                         " \"email\" : \"IKAROLJERONIMO@hotmail.com\" ," +
                         " \"senha\" : \"I301020\" ," +
                         " \"sexo\" : \"FEMININO\" ," +
                         " \"sobrenome\" : \"IJeronimo\" }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(3)))
-                //.andExpect(jsonPath("$.dthr_cadastro", is("2017-01-28T04:00:00.000+0000")))
+                //.andExpect(jsonPath("$.dtHrCadastro", is("2017-01-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$.nome", is("Ikarol")))
                 .andExpect(jsonPath("$.sobrenome", is("IJeronimo")))
                 .andExpect(jsonPath("$.login", is("IKAROL JERONIMO")))
                 .andExpect(jsonPath("$.email", is("IKAROLJERONIMO@hotmail.com")))
+                .andExpect(jsonPath("$.telefone", is("67999159969")))
                 .andExpect(jsonPath("$.senha", is("I301020")))
                 .andExpect(jsonPath("$.sexo", is("FEMININO")));
     }
@@ -110,7 +112,7 @@ public class UsuarioServerTest extends GenericTest{
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
                 .andExpect(jsonPath("$[0].id", is(1)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[0].nome", is("Eduardo")))
                 .andExpect(jsonPath("$[0].sobrenome", is("Balan")))
                 .andExpect(jsonPath("$[0].login", is("Eduardo Balan")))

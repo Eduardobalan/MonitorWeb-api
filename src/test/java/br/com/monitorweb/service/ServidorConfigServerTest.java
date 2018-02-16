@@ -47,8 +47,8 @@ public class ServidorConfigServerTest extends GenericTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].id", is(1)))
-                .andExpect(jsonPath("$[0].dthr_alteracao", is("2017-02-28T04:00:00.000+0000")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[0].intervaloCpu", is(15)))
                 .andExpect(jsonPath("$[0].intervaloMemoria", is(20)))
                 .andExpect(jsonPath("$[1].id", is(2)))
@@ -75,30 +75,43 @@ public class ServidorConfigServerTest extends GenericTest {
         mockMvc.perform(get("/servidor/0/servidorconfiguracoes/2"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(2)))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$.servidor.id", is(1)))
                 .andExpect(jsonPath("$.intervaloCpu", is(10)))
                 .andExpect(jsonPath("$.intervaloMemoria", is(25)));
     }
 
     @Test
-    public void inserirTest() throws Exception {
+    public void inserirTodoObjetoTest() throws Exception {
 
         mockMvc.perform(post("/servidor/0/servidorconfiguracoes/").contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content("{ " +
                         " \"nome\" : \"Novo Registro\" ," +
                         " \"servidor\":{\"id\":2}," +
-                        //" \"dthr_cadastro\" : \"2017-02-28T04:00:00.000+0000\" ," +
-                        //" \"dthr_alteracao\" : \"2017-02-28T04:00:00.000+0000\" ," +
+                        " \"dtHrAlteracao\" : \"2017-02-28T04:00:00.000+0000\" ," +
                         " \"intervaloMemoria\" : 100 ," +
-                        " \"intervaloCpu\" : 150 }"))
+                        " \"intervaloSwap\" : 101 ," +
+                        " \"hostMonitoramento\" : \"192.168.1.111\" ," +
+                        " \"hostMonitoramento2\" : \"192.168.1.112\" ," +
+                        " \"ip\" : \"10.1.1.10\" ," +
+                        " \"intervaloLeituraConfiguracoes\" : 103 ," +
+                        " \"intervaloLeituraConfiguracoesDb\" : 104 ," +
+                        " \"porta\" : 999 ," +
+                        " \"porta2\" : 998 ," +
+                        " \"intervaloCpu\" : 105 }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(4)))
                 .andExpect(jsonPath("$.servidor.id", is(2)))
-                //.andExpect(jsonPath("$.dthr_alteracao", is("2017-02-28T04:00:00.000+0000")))
-                //.andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$.dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$.intervaloMemoria", is(100)))
-                .andExpect(jsonPath("$.intervaloCpu", is(150)));
+                .andExpect(jsonPath("$.intervaloSwap", is(101)))
+                .andExpect(jsonPath("$.hostMonitoramento", is("192.168.1.111")))
+                .andExpect(jsonPath("$.hostMonitoramento2", is("192.168.1.112")))
+                .andExpect(jsonPath("$.intervaloLeituraConfiguracoes", is(103)))
+                .andExpect(jsonPath("$.intervaloLeituraConfiguracoesDb", is(104)))
+                .andExpect(jsonPath("$.porta", is(999)))
+                .andExpect(jsonPath("$.porta2", is(998)))
+                .andExpect(jsonPath("$.intervaloCpu", is(105)));
     }
 
     @Test

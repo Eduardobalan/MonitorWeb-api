@@ -22,7 +22,4 @@ public class SqlInexistenteRuntimeException extends RuntimeException {
         super(message, null);
     }
 
-    public String getMessage() {
-        return super.getMessage();
-    }
 }

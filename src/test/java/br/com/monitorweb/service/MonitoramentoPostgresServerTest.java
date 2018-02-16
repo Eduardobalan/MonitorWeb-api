@@ -52,7 +52,7 @@ public class MonitoramentoPostgresServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].tipoExecucao", is(EnumSgdbTipoExec.BACKUP.toString())))
                 .andExpect(jsonPath("$[0].exito", is(0)))
                 .andExpect(jsonPath("$[0].mensagem", is("Completado com sucesso")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].tipoExecucao", is(EnumSgdbTipoExec.BACKUP.toString())))
                 .andExpect(jsonPath("$[2].id", is(3)))
@@ -71,7 +71,7 @@ public class MonitoramentoPostgresServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].tipoExecucao", is(EnumSgdbTipoExec.BACKUP.toString())))
                 .andExpect(jsonPath("$[0].exito", is(0)))
                 .andExpect(jsonPath("$[0].mensagem", is("Completado com sucesso")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].servidorConfigDb.id", is(1)))
                 .andExpect(jsonPath("$[1].tipoExecucao", is(EnumSgdbTipoExec.BACKUP.toString())))
@@ -87,7 +87,7 @@ public class MonitoramentoPostgresServerTest extends GenericTest {
                 .andExpect(jsonPath("$.tipoExecucao", is(EnumSgdbTipoExec.BACKUP.toString())))
                 .andExpect(jsonPath("$.exito", is(0)))
                 .andExpect(jsonPath("$.mensagem", is("Completado com sucesso")))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test
@@ -97,16 +97,16 @@ public class MonitoramentoPostgresServerTest extends GenericTest {
                 .content("{ " +
                         " \"servidorConfigDb\":{\"id\":3}," +
                         " \"tipoExecucao\" : \"BACKUP\" ," +
-                        " \"dbmp_exito\" : 0 ," +
+                        " \"exito\" : 0 ," +
                         " \"mensagem\" : \"Exito ao executar o backup\" ," +
-                        " \"dthr_cadastro\" : \"2017-02-28T04:00:00.000+0000\" }"))
+                        " \"dtHrCadastro\" : \"2017-02-28T04:00:00.000+0000\" }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(5)))
                 .andExpect(jsonPath("$.servidorConfigDb.id", is(3)))
                 .andExpect(jsonPath("$.tipoExecucao", is(EnumSgdbTipoExec.BACKUP.toString())))
                 .andExpect(jsonPath("$.exito", is(0)))
                 .andExpect(jsonPath("$.mensagem", is("Exito ao executar o backup")));
-               // .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+               // .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test

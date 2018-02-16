@@ -26,7 +26,7 @@ public class Dominio extends GenericEntity<Long>{
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "domi_dthr_cadastro")
-    private Date dthr_cadastro;
+    private Date dtHrCadastro;
 
     @Column(name = "domi_observacao")
     private String observacao;
@@ -56,12 +56,12 @@ public class Dominio extends GenericEntity<Long>{
     }
 
     @Override
-    public Date getDthr_cadastro() {
-        return dthr_cadastro;
+    public Date getDtHrCadastro() {
+        return dtHrCadastro;
     }
 
     @Override
-    public void setDthr_cadastro(Date dthr_cadastro) {
-        this.dthr_cadastro = dthr_cadastro;
+    public void setDtHrCadastro(Date dtHrCadastro) {
+        this.dtHrCadastro = dtHrCadastro;
     }
 }

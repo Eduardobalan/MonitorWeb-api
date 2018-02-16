@@ -52,7 +52,7 @@ public class MonitoramentoMemoriaServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].memfree", is(8000)))
                 .andExpect(jsonPath("$[0].availabre", is(100)))
                 .andExpect(jsonPath("$[0].buffers", is(10)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[2].id", is(3)))
                 .andExpect(jsonPath("$[3].id", is(4)));
@@ -69,7 +69,7 @@ public class MonitoramentoMemoriaServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].memfree", is(8000)))
                 .andExpect(jsonPath("$[0].availabre", is(100)))
                 .andExpect(jsonPath("$[0].buffers", is(10)))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].informacoesMemoria.id", is(1)))
                 .andExpect(jsonPath("$[1].active", is(8000)));
@@ -85,7 +85,7 @@ public class MonitoramentoMemoriaServerTest extends GenericTest {
                 .andExpect(jsonPath("$.memfree", is(8000)))
                 .andExpect(jsonPath("$.availabre", is(100)))
                 .andExpect(jsonPath("$.buffers", is(10)))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test
@@ -98,7 +98,7 @@ public class MonitoramentoMemoriaServerTest extends GenericTest {
                         " \"memfree\" : 22000 ," +
                         " \"availabre\" : 5000 ," +
                         " \"buffers\" : 6000 ," +
-                        " \"dthr_cadastro\" : \"2017-02-28T04:00:00.000+0000\" }"))
+                        " \"dtHrCadastro\" : \"2017-02-28T04:00:00.000+0000\" }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(5)))
                 .andExpect(jsonPath("$.informacoesMemoria.id", is(3)))
@@ -106,7 +106,7 @@ public class MonitoramentoMemoriaServerTest extends GenericTest {
                 .andExpect(jsonPath("$.memfree", is(22000)))
                 .andExpect(jsonPath("$.availabre", is(5000)))
                 .andExpect(jsonPath("$.buffers", is(6000)));
-                //.andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                //.andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test

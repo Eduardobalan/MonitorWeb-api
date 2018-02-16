@@ -54,8 +54,8 @@ public class ServidorConfigDbServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].pathMain", is("/etc/postgres/9.6/main")))
                 .andExpect(jsonPath("$[0].porta", is(5432)))
                 .andExpect(jsonPath("$[0].versao", is("9.6")))
-                .andExpect(jsonPath("$[0].dthr_alteracao", is("2017-02-28T04:00:00.000+0000")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].servidor.id", is(1)))
                 .andExpect(jsonPath("$[0].nomeSgdb", is(EnumSgdb.POSTGRESQL.toString())))
@@ -76,8 +76,8 @@ public class ServidorConfigDbServerTest extends GenericTest {
                 .andExpect(jsonPath("$[0].pathMain", is("/etc/postgres/9.6/main")))
                 .andExpect(jsonPath("$[0].porta", is(5432)))
                 .andExpect(jsonPath("$[0].versao", is("9.6")))
-                .andExpect(jsonPath("$[0].dthr_alteracao", is("2017-02-28T04:00:00.000+0000")))
-                .andExpect(jsonPath("$[0].dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$[0].dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[1].servidor.id", is(1)));
     }
@@ -93,8 +93,8 @@ public class ServidorConfigDbServerTest extends GenericTest {
                 .andExpect(jsonPath("$.pathMain", is("/etc/postgres/9.6/main")))
                 .andExpect(jsonPath("$.porta", is(5432)))
                 .andExpect(jsonPath("$.versao", is("9.6")))
-                .andExpect(jsonPath("$.dthr_alteracao", is("2017-02-28T04:00:00.000+0000")))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")));
+                .andExpect(jsonPath("$.dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")));
     }
 
     @Test

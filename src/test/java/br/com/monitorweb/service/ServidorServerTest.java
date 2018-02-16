@@ -62,7 +62,7 @@ public class ServidorServerTest extends GenericTest{
         mockMvc.perform(get("/servidor/2"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(2)))
-                .andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                .andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$.nome", is("Servidor2")))
                 .andExpect(jsonPath("$.empresa", is("Emp2")))
                 .andExpect(jsonPath("$.observacao", is("obs2")));
@@ -76,14 +76,14 @@ public class ServidorServerTest extends GenericTest{
                         " \"nome\" : \"Novo Registro\" ," +
                         " \"dominio\":{\"id\":2}," +
                         " \"empresa\" : \"Nova Empresa\" ," +
-                        " \"dthr_cadastro\" : \"2017-02-28T04:00:00.000+0000\" ," +
+                        " \"dtHrCadastro\" : \"2017-02-28T04:00:00.000+0000\" ," +
                         " \"observacao\" : \"Nova Observacao\" }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(4)))
                 .andExpect(jsonPath("$.nome", is("Novo Registro")))
                 .andExpect(jsonPath("$.dominio.id", is(2)))
                 .andExpect(jsonPath("$.empresa", is("Nova Empresa")))
-                //.andExpect(jsonPath("$.dthr_cadastro", is("2017-02-28T04:00:00.000+0000")))
+                //.andExpect(jsonPath("$.dtHrCadastro", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$.observacao", is("Nova Observacao")));
     }
 

@@ -26,11 +26,11 @@ public class ServidorConfig extends GenericEntity<Long>{
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "serc_dthr_cadastro")
-    private Date dthr_cadastro;
+    private Date dtHrCadastro;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "serc_dthr_alteracao")
-    private Date dthr_alteracao;
+    private Date dtHrAlteracao;
 
     @Column(name = "serc_intervalo_leitura_configuracoes", columnDefinition = "integer default 60")
     private Long intervaloLeituraConfiguracoes;
@@ -79,20 +79,20 @@ public class ServidorConfig extends GenericEntity<Long>{
         this.servidor = servidor;
     }
 
-    public Date getDthr_cadastro() {
-        return dthr_cadastro;
+    public Date getDtHrCadastro() {
+        return dtHrCadastro;
     }
 
-    public void setDthr_cadastro(Date dthr_cadastro) {
-        this.dthr_cadastro = dthr_cadastro;
+    public void setDtHrCadastro(Date dtHrCadastro) {
+        this.dtHrCadastro = dtHrCadastro;
     }
 
-    public Date getDthr_alteracao() {
-        return dthr_alteracao;
+    public Date getdtHrAlteracao() {
+        return dtHrAlteracao;
     }
 
-    public void setDthr_alteracao(Date dthr_alteracao) {
-        this.dthr_alteracao = dthr_alteracao;
+    public void setdtHrAlteracao(Date dtHrAlteracao) {
+        this.dtHrAlteracao = dtHrAlteracao;
     }
 
     public Long getIntervaloCpu() {

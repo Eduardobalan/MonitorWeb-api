@@ -13,6 +13,6 @@ import org.springframework.context.annotation.ComponentScan;
 public class WebMonitorApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebMonitorApp.class, args);
+        SpringApplication.run(WebMonitorApp.class, args);//NOSONAR
     }
 }

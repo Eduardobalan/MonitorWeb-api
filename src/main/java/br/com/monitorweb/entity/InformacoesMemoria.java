@@ -25,7 +25,7 @@ public class InformacoesMemoria extends GenericEntity<Long>{
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "memi_dthr_cadastro")
-    private Date dthr_cadastro;
+    private Date dtHrCadastro;
 
     @Column(name = "memi_total")
     private Long total;
@@ -46,12 +46,12 @@ public class InformacoesMemoria extends GenericEntity<Long>{
         this.servidor = servidor;
     }
 
-    public Date getDthr_cadastro() {
-        return dthr_cadastro;
+    public Date getDtHrCadastro() {
+        return dtHrCadastro;
     }
 
-    public void setDthr_cadastro(Date dthr_cadastro) {
-        this.dthr_cadastro = dthr_cadastro;
+    public void setDtHrCadastro(Date dtHrCadastro) {
+        this.dtHrCadastro = dtHrCadastro;
     }
 
     public Long getTotal() {
