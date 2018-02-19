@@ -1,6 +1,6 @@
 package br.com.monitorweb.entity;
 
-import br.com.monitorweb.entity.PK.UsuarioHasDominioPK;
+import br.com.monitorweb.entity.pk.UsuarioHasDominioPK;
 
 import javax.persistence.*;
 

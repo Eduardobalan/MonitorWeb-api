@@ -2,6 +2,7 @@ package br.com.monitorweb.service;
 
 import br.com.monitorweb.GenericTest;
 import br.com.monitorweb.enumeration.EnumSgdb;
+import br.com.monitorweb.enumeration.EnumSgdbTipoExec;
 import br.com.monitorweb.exception.SqlInexistenteRuntimeException;
 import com.github.springtestdbunit.annotation.DatabaseOperation;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
@@ -105,17 +106,29 @@ public class ServidorConfigDbServerTest extends GenericTest {
                         " \"nome\" : \"Novo Registro\" ," +
                         " \"servidor\":{\"id\":2}," +
                         " \"nomeSgdb\" : \"POSTGRESQL\" ," +
+                        " \"sgdbTipoExec\" : \"BACKUP\" ," +
+                        " \"dtHrAlteracao\" : \"2017-02-28T04:00:00.000+0000\" ," +
                         " \"nomeDb\" : \"SacX\" ," +
+                        " \"intervaloExec\" : 20 ," +
                         " \"pathMain\" : \"/etc/postgres/7.6/main\" ," +
+                        " \"ip\" : \"192.168.1.100\" ," +
                         " \"porta\" : 5432," +
+                        " \"ativo\" : true," +
                         " \"versao\" : \"7.6\" }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(4)))
                 .andExpect(jsonPath("$.servidor.id", is(2)))
                 .andExpect(jsonPath("$.nomeSgdb", is(EnumSgdb.POSTGRESQL.toString())))
+                .andExpect(jsonPath("$.nomeSgdb", is(EnumSgdb.POSTGRESQL.getNome().toUpperCase())))
+                .andExpect(jsonPath("$.sgdbTipoExec", is(EnumSgdbTipoExec.BACKUP.toString())))
+                .andExpect(jsonPath("$.sgdbTipoExec", is(EnumSgdbTipoExec.BACKUP.getNome().toUpperCase())))
                 .andExpect(jsonPath("$.nomeDb", is("SacX")))
+                .andExpect(jsonPath("$.dtHrAlteracao", is("2017-02-28T04:00:00.000+0000")))
                 .andExpect(jsonPath("$.pathMain", is("/etc/postgres/7.6/main")))
+                .andExpect(jsonPath("$.ip", is("192.168.1.100")))
+                .andExpect(jsonPath("$.intervaloExec", is(20)))
                 .andExpect(jsonPath("$.porta", is(5432)))
+                .andExpect(jsonPath("$.ativo", is(true)))
                 .andExpect(jsonPath("$.versao", is("7.6")));
     }
 

@@ -29,22 +29,12 @@ import java.util.List;
 
     @RequestMapping(method = RequestMethod.GET, path = "/{id}")
     public Object buscarPorId(@PathVariable("id") Long id){
-        Usuario UsuarioDaBusca = usuarioRepository.findOne(id);
+        Usuario usuarioDaBusca = usuarioRepository.findOne(id);
 
-        if(UsuarioDaBusca == null){
+        if(usuarioDaBusca == null){
             throw new SqlInexistenteRuntimeException("Usuario não localizado.", null);
         }
 
-        return usuarioHasDominioRepository.findByUsuario(UsuarioDaBusca);
+        return usuarioHasDominioRepository.findByUsuario(usuarioDaBusca);
     }
-//
-//    @RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
-//    public void excluir(@PathVariable("id") Long id) {
-//        business.excluir(id);
-//    }
-//
-//    @RequestMapping(method = RequestMethod.POST)
-//    public Entity inserir(@RequestBody Entity Entity) {
-//        return business.inserir(Entity);
-//    }
 }

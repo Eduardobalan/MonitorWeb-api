@@ -1,7 +1,7 @@
-package br.com.monitorweb.service.Generic;
+package br.com.monitorweb.service.generic;
 
 import br.com.monitorweb.business.generic.GenericBO;
-import br.com.monitorweb.entity.Generic.GenericEntity;
+import br.com.monitorweb.entity.generic.GenericEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.web.bind.annotation.*;
@@ -24,18 +24,18 @@ import java.util.List;
  *
  */
 @MappedSuperclass
-public class GenericService<Entity extends GenericEntity, Business extends GenericBO<Entity, Repository>, Repository extends JpaRepository<Entity, Long>> {
+public class GenericService<E extends GenericEntity, B extends GenericBO<E, R>, R extends JpaRepository<E, Long>> {
 
     /* Regras de servico da Entity.*/
     @Autowired
-    private Business business;
+    private B business;
 
     /* Repositorio responsavel pela Entity.*/
     @Autowired
-    private Repository repository;
+    private R repository;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Entity> buscar(){
+    public List<E> buscar(){
         return repository.findAll();
     }
 
@@ -50,7 +50,7 @@ public class GenericService<Entity extends GenericEntity, Business extends Gener
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Entity inserir(@RequestBody Entity Entity) {
-        return business.inserir(Entity);
+    public E inserir(@RequestBody E entitySalvar) {
+        return business.inserir(entitySalvar);
     }
 }

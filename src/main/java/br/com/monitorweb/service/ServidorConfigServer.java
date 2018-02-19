@@ -3,7 +3,7 @@ package br.com.monitorweb.service;
 import br.com.monitorweb.business.ServidorConfigBO;
 import br.com.monitorweb.entity.ServidorConfig;
 import br.com.monitorweb.repository.ServidorConfigRepository;
-import br.com.monitorweb.service.Generic.InformacoesGenericService;
+import br.com.monitorweb.service.generic.InformacoesGenericService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

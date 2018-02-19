@@ -1,6 +1,6 @@
 package br.com.monitorweb.entity;
 
-import br.com.monitorweb.entity.Generic.GenericEntity;
+import br.com.monitorweb.entity.generic.GenericEntity;
 import br.com.monitorweb.enumeration.EnumSgdb;
 import br.com.monitorweb.enumeration.EnumSgdbTipoExec;
 
@@ -65,11 +65,6 @@ public class ServidorConfigDb extends GenericEntity<Long>{
     @Override
     public Long getId() {
         return id;
-    }
-
-    @Override
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Servidor getServidor() {

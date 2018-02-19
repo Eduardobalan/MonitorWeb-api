@@ -1,6 +1,6 @@
 package br.com.monitorweb.entity;
 
-import br.com.monitorweb.entity.Generic.GenericEntity;
+import br.com.monitorweb.entity.generic.GenericEntity;
 import br.com.monitorweb.enumeration.EnumSexo;
 
 import javax.persistence.*;
@@ -52,7 +52,6 @@ public class Usuario extends GenericEntity<Long>{
         return id;
     }
 
-    @Override
     public void setId(Long id) {
         this.id = id;
     }

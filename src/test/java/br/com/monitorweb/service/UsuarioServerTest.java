@@ -1,6 +1,7 @@
 package br.com.monitorweb.service;
 
 import br.com.monitorweb.GenericTest;
+import br.com.monitorweb.enumeration.EnumSexo;
 import br.com.monitorweb.exception.SqlInexistenteRuntimeException;
 import com.github.springtestdbunit.annotation.DatabaseOperation;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
@@ -100,7 +101,7 @@ public class UsuarioServerTest extends GenericTest{
                 .andExpect(jsonPath("$.email", is("IKAROLJERONIMO@hotmail.com")))
                 .andExpect(jsonPath("$.telefone", is("67999159969")))
                 .andExpect(jsonPath("$.senha", is("I301020")))
-                .andExpect(jsonPath("$.sexo", is("FEMININO")));
+                .andExpect(jsonPath("$.sexo", is(EnumSexo.FEMININO.toString())));
     }
 
     @Test
@@ -118,7 +119,8 @@ public class UsuarioServerTest extends GenericTest{
                 .andExpect(jsonPath("$[0].login", is("Eduardo Balan")))
                 .andExpect(jsonPath("$[0].email", is("Eduardo_balan1@hotmail.com")))
                 .andExpect(jsonPath("$[0].senha", is("102030")))
-                .andExpect(jsonPath("$[0].sexo", is("MASCULINO")));
+                .andExpect(jsonPath("$[0].sexo", is(EnumSexo.MASCULINO.toString())))
+                .andExpect(jsonPath("$[0].sexo", is(EnumSexo.MASCULINO.getNome().toUpperCase())));
     }
 
     //----------------  Exception ----------------------------

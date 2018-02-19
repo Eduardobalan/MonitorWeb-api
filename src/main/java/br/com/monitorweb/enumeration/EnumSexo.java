@@ -14,7 +14,7 @@ public enum EnumSexo {
         this.sexo = sexo;
     }
 
-    public String toString() {
+    public String getNome() {
         return this.sexo;
     }
 

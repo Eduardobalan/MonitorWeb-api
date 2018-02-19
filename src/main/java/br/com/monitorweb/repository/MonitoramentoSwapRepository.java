@@ -1,7 +1,7 @@
 package br.com.monitorweb.repository;
 
 import br.com.monitorweb.entity.MonitoramentoSwap;
-import br.com.monitorweb.repository.Generic.MonitoramentoGenericRepository;
+import br.com.monitorweb.repository.generic.MonitoramentoGenericRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 

@@ -3,7 +3,7 @@ package br.com.monitorweb.service;
 import br.com.monitorweb.business.DominioBO;
 import br.com.monitorweb.entity.Dominio;
 import br.com.monitorweb.repository.DominioRepository;
-import br.com.monitorweb.service.Generic.GenericService;
+import br.com.monitorweb.service.generic.GenericService;
 import org.springframework.web.bind.annotation.*;
 
 /**

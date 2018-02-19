@@ -1,10 +1,10 @@
-package br.com.monitorweb.service.Generic;
+package br.com.monitorweb.service.generic;
 
 import br.com.monitorweb.business.generic.GenericBO;
-import br.com.monitorweb.entity.Generic.GenericEntity;
+import br.com.monitorweb.entity.generic.GenericEntity;
 import br.com.monitorweb.entity.Servidor;
 import br.com.monitorweb.exception.SqlInexistenteRuntimeException;
-import br.com.monitorweb.repository.Generic.InformacoesGenericRepository;
+import br.com.monitorweb.repository.generic.InformacoesGenericRepository;
 import br.com.monitorweb.repository.ServidorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,22 +30,22 @@ import java.util.List;
  *
  */
 @MappedSuperclass
-public class InformacoesGenericService<Entity extends GenericEntity, Business extends GenericBO<Entity, Repository>, Repository extends InformacoesGenericRepository<Entity, Long>> {
+public class InformacoesGenericService<E extends GenericEntity, B extends GenericBO<E, R>, R extends InformacoesGenericRepository<E, Long>> {
 
     /* Regras de servico da Entity.*/
     @Autowired
-    private Business business;
+    private B business;
 
     /* Repositorio responsavel pela Entity.*/
     @Autowired
-    private Repository repository;
+    private R repository;
 
     /* Repositório do Servidor, a quais todas as entidades do tipo Informacoes posuem relacionamento.*/
     @Autowired
     private ServidorRepository servidorRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Entity> buscarPorIdServidor(@PathVariable("idServidor") Long idServidor){
+    public List<E> buscarPorIdServidor(@PathVariable("idServidor") Long idServidor){
         if(idServidor<=0){
             return repository.findAll();
         }
@@ -59,7 +59,7 @@ public class InformacoesGenericService<Entity extends GenericEntity, Business ex
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/{idInformacoes}")
-    public Entity buscarPorIdInformacoes(@PathVariable("idInformacoes") Long idMonitoramento){
+    public E buscarPorIdInformacoes(@PathVariable("idInformacoes") Long idMonitoramento){
         return repository.findOne(idMonitoramento);
     }
 
@@ -69,7 +69,7 @@ public class InformacoesGenericService<Entity extends GenericEntity, Business ex
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Entity inserir(@RequestBody Entity Entity) {
-        return business.inserir(Entity);
+    public E inserir(@RequestBody E entity) {
+        return business.inserir(entity);
     }
 }

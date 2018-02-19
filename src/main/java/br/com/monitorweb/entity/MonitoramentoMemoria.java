@@ -1,6 +1,6 @@
 package br.com.monitorweb.entity;
 
-import br.com.monitorweb.entity.Generic.GenericEntity;
+import br.com.monitorweb.entity.generic.GenericEntity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -40,10 +40,6 @@ public class MonitoramentoMemoria extends GenericEntity<Long>{
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public InformacoesMemoria getInformacoesMemoria() {

@@ -3,7 +3,7 @@ package br.com.monitorweb.service;
 import br.com.monitorweb.business.MonitoramentoPostgresBO;
 import br.com.monitorweb.entity.MonitoramentoPostgres;
 import br.com.monitorweb.repository.MonitoramentoPostgresRepository;
-import br.com.monitorweb.service.Generic.MonitoramentoGenericService;
+import br.com.monitorweb.service.generic.MonitoramentoGenericService;
 import org.springframework.web.bind.annotation.*;
 
 /**

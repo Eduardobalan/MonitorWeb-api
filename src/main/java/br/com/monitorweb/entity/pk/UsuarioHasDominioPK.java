@@ -1,4 +1,4 @@
-package br.com.monitorweb.entity.PK;
+package br.com.monitorweb.entity.pk;
 
 import javax.persistence.Column;
 import java.io.Serializable;

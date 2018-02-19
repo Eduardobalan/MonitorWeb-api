@@ -1,6 +1,6 @@
 package br.com.monitorweb.entity;
 
-import br.com.monitorweb.entity.Generic.GenericEntity;
+import br.com.monitorweb.entity.generic.GenericEntity;
 import br.com.monitorweb.enumeration.EnumSgdbTipoExec;
 
 import javax.persistence.*;
@@ -39,10 +39,6 @@ public class MonitoramentoPostgres extends GenericEntity<Long>{
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public ServidorConfigDb getServidorConfigDb() {

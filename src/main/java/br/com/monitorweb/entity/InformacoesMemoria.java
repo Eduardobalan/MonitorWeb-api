@@ -1,7 +1,6 @@
 package br.com.monitorweb.entity;
 
-import br.com.monitorweb.entity.Generic.GenericEntity;
-
+import br.com.monitorweb.entity.generic.GenericEntity;
 import javax.persistence.*;
 import java.util.Date;
 
@@ -9,7 +8,6 @@ import java.util.Date;
  * Created by Eduardo Balan on 01/07/2017.
  */
 @Entity
-//@DynamicUpdate
 @Table(name = "tb_informacoes_memoria" , schema = "public")
 @SequenceGenerator(name = "tb_informacoes_memoria_memi_id_seq", sequenceName = "public.tb_informacoes_memoria_memi_id_seq")
 public class InformacoesMemoria extends GenericEntity<Long>{
@@ -32,10 +30,6 @@ public class InformacoesMemoria extends GenericEntity<Long>{
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Servidor getServidor() {

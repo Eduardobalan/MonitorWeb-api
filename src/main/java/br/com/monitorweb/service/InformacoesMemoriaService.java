@@ -3,7 +3,7 @@ package br.com.monitorweb.service;
 import br.com.monitorweb.business.InformacoesMemoriaBO;
 import br.com.monitorweb.entity.InformacoesMemoria;
 import br.com.monitorweb.repository.InformacoesMemoriaRepository;
-import br.com.monitorweb.service.Generic.InformacoesGenericService;
+import br.com.monitorweb.service.generic.InformacoesGenericService;
 import org.springframework.web.bind.annotation.*;
 
 /**

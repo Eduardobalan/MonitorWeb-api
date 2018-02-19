@@ -5,7 +5,7 @@ package br.com.monitorweb.enumeration;
  */
 public enum EnumSgdbTipoExec {
 
-    BACKUP("backup"), VACUUM("vacuum");
+    BACKUP("Backup"), VACUUM("Vacuum");
 
     private String nome;
 

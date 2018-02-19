@@ -1,6 +1,6 @@
 package br.com.monitorweb.entity;
 
-import br.com.monitorweb.entity.Generic.GenericEntity;
+import br.com.monitorweb.entity.generic.GenericEntity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -64,11 +64,6 @@ public class ServidorConfig extends GenericEntity<Long>{
     @Override
     public Long getId() {
         return id;
-    }
-
-    @Override
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Servidor getServidor() {

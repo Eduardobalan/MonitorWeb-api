@@ -4,7 +4,7 @@ package br.com.monitorweb.service;
 import br.com.monitorweb.business.MonitoramentoSwapBO;
 import br.com.monitorweb.entity.MonitoramentoSwap;
 import br.com.monitorweb.repository.MonitoramentoSwapRepository;
-import br.com.monitorweb.service.Generic.MonitoramentoGenericService;
+import br.com.monitorweb.service.generic.MonitoramentoGenericService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

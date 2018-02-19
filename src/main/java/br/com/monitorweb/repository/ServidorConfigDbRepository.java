@@ -1,7 +1,7 @@
 package br.com.monitorweb.repository;
 
 import br.com.monitorweb.entity.ServidorConfigDb;
-import br.com.monitorweb.repository.Generic.InformacoesGenericRepository;
+import br.com.monitorweb.repository.generic.InformacoesGenericRepository;
 
 
 /**

@@ -1,4 +1,4 @@
-package br.com.monitorweb.entity.Generic;
+package br.com.monitorweb.entity.generic;
 
 
 import java.io.Serializable;
@@ -17,8 +17,6 @@ public abstract class GenericEntity<T extends Serializable> implements Serializa
     private static final long serialVersionUID = 1L;
 
     public abstract T getId();
-
-    public abstract void setId(T id);
 
     public abstract Date getDtHrCadastro();
 

@@ -1,6 +1,6 @@
 package br.com.monitorweb.business.generic;
 
-import br.com.monitorweb.entity.Generic.GenericEntity;
+import br.com.monitorweb.entity.generic.GenericEntity;
 import br.com.monitorweb.exception.SqlGenericRuntimeException;
 import br.com.monitorweb.exception.SqlInexistenteRuntimeException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,24 +24,24 @@ import java.util.Date;
  * @throws SqlGenericRuntimeException
  */
 @MappedSuperclass
-public class GenericBO <Entity extends GenericEntity, Repository extends JpaRepository<Entity, Long>> {
+public class GenericBO <E extends GenericEntity, R extends JpaRepository<E, Long>> {
 
     /* Repositorio responsavel pela Entity */
     @Autowired
-    private Repository repository;
+    private R repository;
 
     /**
      * Metodo responsável pelas regras de negocio genéricas da inserção.
      *
      * @author Eduardo Balan
      *
-     * @param Entity Entidade que sera persistida no banco de dados.
+     * @param E Entidade que sera persistida no banco de dados.
      *
      * @throws SqlGenericRuntimeException
      *
      * return Entity persistida no banco de dados.
      */
-    public Entity inserir(Entity entityNova){
+    public E inserir(E entityNova){
         try{
             entityNova.setDtHrCadastro(new Date());
             return repository.save(entityNova);
@@ -63,7 +63,7 @@ public class GenericBO <Entity extends GenericEntity, Repository extends JpaRepo
      * return void.
      */
     public void excluir(Long idEntity){
-        Entity entityPersistidaNoDB = repository.findOne(idEntity);
+        E entityPersistidaNoDB = repository.findOne(idEntity);
         if(entityPersistidaNoDB == null){
             throw new SqlInexistenteRuntimeException("Registro não encontrado na base de dados.", null);
         }

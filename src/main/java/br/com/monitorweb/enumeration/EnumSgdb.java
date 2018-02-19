@@ -5,7 +5,7 @@ package br.com.monitorweb.enumeration;
  */
 public enum EnumSgdb {
 
-    POSTGRESQL("postgresql");
+    POSTGRESQL("PostgreSQL");
 
     private String nome;
 
