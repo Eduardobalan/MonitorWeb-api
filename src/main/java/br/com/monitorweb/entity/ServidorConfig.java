@@ -162,4 +162,19 @@ public class ServidorConfig extends GenericEntity<Long>{
         this.porta2 = porta2;
     }
 
+    @Override
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
 }

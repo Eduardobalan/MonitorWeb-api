@@ -83,4 +83,19 @@ public class Servidor  extends GenericEntity<Long>{
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
+
+    @Override
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

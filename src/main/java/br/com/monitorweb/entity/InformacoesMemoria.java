@@ -55,4 +55,19 @@ public class InformacoesMemoria extends GenericEntity<Long>{
     public void setTotal(Long total) {
         this.total = total;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public void setId(Long id){
+        this.id = id;
+    }
 }

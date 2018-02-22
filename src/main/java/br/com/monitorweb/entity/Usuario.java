@@ -52,6 +52,7 @@ public class Usuario extends GenericEntity<Long>{
         return id;
     }
 
+    @Override
     public void setId(Long id) {
         this.id = id;
     }
@@ -118,5 +119,15 @@ public class Usuario extends GenericEntity<Long>{
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

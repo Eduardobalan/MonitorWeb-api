@@ -67,5 +67,20 @@ public class MonitoramentoCpu extends GenericEntity<Long>{
     public void setDtHrCadastro(Date dtHrCadastro) {
         this.dtHrCadastro = dtHrCadastro;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public void setId(Long id){
+        this.id = id;
+    }
 }
 

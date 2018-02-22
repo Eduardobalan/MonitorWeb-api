@@ -89,5 +89,20 @@ public class MonitoramentoMemoria extends GenericEntity<Long>{
     public void setBuffers(Long buffers) {
         this.buffers = buffers;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
 

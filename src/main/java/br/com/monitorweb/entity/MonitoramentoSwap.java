@@ -67,5 +67,20 @@ public class MonitoramentoSwap extends GenericEntity<Long>{
     public void setCached(Long cached) {
         this.cached = cached;
     }
+
+    @Override
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
 

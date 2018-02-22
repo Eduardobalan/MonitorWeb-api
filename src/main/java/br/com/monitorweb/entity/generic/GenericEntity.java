@@ -18,6 +18,8 @@ public abstract class GenericEntity<T extends Serializable> implements Serializa
 
     public abstract T getId();
 
+    public abstract void setId(T id);
+
     public abstract Date getDtHrCadastro();
 
     public abstract void setDtHrCadastro(Date date);

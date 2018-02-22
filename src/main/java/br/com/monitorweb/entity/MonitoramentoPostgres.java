@@ -74,6 +74,11 @@ public class MonitoramentoPostgres extends GenericEntity<Long>{
     }
 
     @Override
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    @Override
     public Date getDtHrCadastro() {
         return dtHrCadastro;
     }
@@ -81,6 +86,16 @@ public class MonitoramentoPostgres extends GenericEntity<Long>{
     @Override
     public void setDtHrCadastro(Date dtHrCadastro) {
         this.dtHrCadastro = dtHrCadastro;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }
 
